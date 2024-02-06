@@ -1,8 +1,13 @@
+import os
+
 import requests
 import telebot
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 
-token = "6436709903:AAFzn9x4EJHdnVq4kBRtOSaCrUJrfKNOW1A"
+load_dotenv('.env')
+
+token = os.getenv('token')
 bot = telebot.TeleBot(token)
 
 
